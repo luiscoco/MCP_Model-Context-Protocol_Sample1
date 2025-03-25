@@ -99,7 +99,6 @@ We can see in the following picture the ModelContextProtocol Nuget package web s
 
 ![image](https://github.com/user-attachments/assets/e44d465e-c974-4565-b913-ebda24d13087)
 
-
 ## 4. Explaining sample source code
 
 This **C#** sample demonstrates how to use the **Model Context Protocol (MCP)** to integrate a tool-based AI system with an LLM (e.g., OpenAI GPT), and have a dynamic conversation where tools can be used during chat interactions.
@@ -208,6 +207,10 @@ using IChatClient chatClient =
     new OpenAIClient("OpenAI-API-Key").AsChatClient("gpt-4o-mini")
     .AsBuilder().UseFunctionInvocation().Build();
 ```
+
+Copy the **OpenAI API-Key* and paste in the **OpenAIClient** method call
+
+![image](https://github.com/user-attachments/assets/a613195e-8c15-4829-9220-37814d69480a)
 
 ### 4.7. Ask the LLM to Use a Tool
 
