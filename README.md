@@ -57,9 +57,7 @@ Load these two nuget packages:
 
 ## 4. Explaining sample source code
 
-This **C#** sample demonstrates how to use the **Model Context Protocol (MCP)** to integrate a tool-based AI system with an LLM (e.g., OpenAI GPT),
-
-and have a dynamic conversation where tools can be used during chat interactions.
+This **C#** sample demonstrates how to use the **Model Context Protocol (MCP)** to integrate a tool-based AI system with an LLM (e.g., OpenAI GPT), and have a dynamic conversation where tools can be used during chat interactions.
 
 ### 4.1. MCP Client Configuration
 
