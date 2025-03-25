@@ -8,9 +8,13 @@
 
 Think of MCP like a USB-C port for AI applications.
 
-Just as USB-C provides a standardized way to connect your devices to various peripherals and accessories, **MCP** provides a standardized way to **connect AI models** to different **data sources** and **tools**.
+Just as USB-C provides a standardized way to connect your devices to various peripherals and accessories,
 
-For more information visit the MCP official web site: https://modelcontextprotocol.io/introduction
+**MCP** provides a standardized way to **connect AI models** to different **data sources** and **tools**.
+
+For more information visit the MCP official web site: 
+
+https://modelcontextprotocol.io/introduction
 
 ## 1. Create the OpenAI API-Key
 
