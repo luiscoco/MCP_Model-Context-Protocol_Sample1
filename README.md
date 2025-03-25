@@ -57,6 +57,142 @@ Load these two nuget packages:
 
 ## 4. Input the source code
 
+This **C# code** demonstrates how to use the **Model Context Protocol (MCP)** to integrate a tool-based AI system with an LLM (e.g., OpenAI GPT),
+
+and have a dynamic conversation where tools can be used during chat interactions.
+
+MCP Client Configuration
+csharp
+Copy
+Edit
+McpClientOptions options = new()
+{
+    ClientInfo = new() { Name = "TestClient", Version = "1.0.0" }
+};
+This sets up basic metadata about your client.
+
+🚀 Start MCP Server and Create Client
+csharp
+Copy
+Edit
+var client = await McpClientFactory.CreateAsync(
+    new()
+    {
+        Id = "everything",
+        Name = "Everything",
+        TransportType = TransportTypes.StdIo,
+        TransportOptions = new()
+        {
+            ["command"] = "npx",
+            ["arguments"] = "-y @modelcontextprotocol/server-everything",
+        }
+    }, options, null, null, default);
+This launches a local tool server (@modelcontextprotocol/server-everything) using npx.
+
+The transport is via StdIO, which means it communicates via standard input/output streams (like CLI).
+
+This client can now interact with the tools served by that MCP server.
+
+🔎 List Available Tools
+csharp
+Copy
+Edit
+await foreach (var tool in client.ListToolsAsync())
+{
+    Console.WriteLine($"{tool.Name} ({tool.Description})");
+}
+Lists all tools made available by the server (e.g., echo, math, etc.).
+
+🛠️ Call a Tool (Direct Execution)
+csharp
+Copy
+Edit
+var result = await client.CallToolAsync(
+    "echo",
+    new() { ["message"] = "Hello MCP!" },
+    CancellationToken.None);
+
+Console.WriteLine(result.Content.First(c => c.Type == "text").Text);
+This calls the echo tool, sending it a message.
+
+It prints the result returned from the tool — in this case, the echoed string.
+
+🧠 Get Functions Usable by the LLM
+csharp
+Copy
+Edit
+IList<AIFunction> tools = await client.GetAIFunctionsAsync();
+Gets the tools in a format that an LLM (e.g., GPT-4) can recognize and use during chat.
+
+🤖 Connect to OpenAI (Chat Client)
+csharp
+Copy
+Edit
+using IChatClient chatClient =
+    new OpenAIClient("OpenAI-API-Key").AsChatClient("gpt-4o-mini")
+    .AsBuilder().UseFunctionInvocation().Build();
+Connects to OpenAI using your API key.
+
+Uses GPT-4o-mini.
+
+Enables function/tool invocation, allowing the LLM to use MCP tools when needed.
+
+💬 Ask the LLM to Use a Tool
+csharp
+Copy
+Edit
+var response = await chatClient.GetResponseAsync(
+    "Hello can you echo Hellow World",
+    new()
+    {
+        Tools = [.. tools],
+    });
+Console.WriteLine(response);
+Asks the LLM a question.
+
+The LLM may decide to invoke a tool (like echo) on its own.
+
+The response includes both the model’s text and the tool output.
+
+🧑‍💻 Interactive Chat Loop with Tool Access
+csharp
+Copy
+Edit
+List<ChatMessage> messages = [];
+while (true)
+{
+    Console.Write("Q: ");
+    messages.Add(new(ChatRole.User, Console.ReadLine()));
+
+    List<ChatResponseUpdate> updates = [];
+    await foreach (var update in chatClient.GetStreamingResponseAsync(messages, new() { Tools = [.. tools] }))
+    {
+        Console.Write(update);
+        updates.Add(update);
+    }
+    Console.WriteLine();
+
+    messages.AddMessages(updates);
+}
+A continuous conversation with the LLM.
+
+Sends user input.
+
+Streams the model’s response (including tool usage if needed).
+
+Appends both questions and answers to maintain context.
+
+🔑 Summary
+This code:
+
+Spins up a local MCP tool server.
+
+Lets you interact with tools directly or through an LLM.
+
+Enables the LLM to invoke tools dynamically as part of a conversation.
+
+Uses OpenAI GPT to understand your intent and call tools intelligently.
+
 ```csharp
 using Microsoft.Extensions.AI;
 using ModelContextProtocol.Client;
