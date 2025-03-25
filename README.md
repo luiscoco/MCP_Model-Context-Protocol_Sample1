@@ -185,6 +185,7 @@ var result = await client.CallToolAsync(
     CancellationToken.None);
 
 Console.WriteLine(result.Content.First(c => c.Type == "text").Text);
+```
 
 ### 4.5. Get Functions Usable by the LLM
 
@@ -208,7 +209,7 @@ using IChatClient chatClient =
     .AsBuilder().UseFunctionInvocation().Build();
 ```
 
-Copy the **OpenAI API-Key* and paste in the **OpenAIClient** method call
+Copy the **OpenAI API-Key** and paste in the **OpenAIClient** method call
 
 ![image](https://github.com/user-attachments/assets/a613195e-8c15-4829-9220-37814d69480a)
 
