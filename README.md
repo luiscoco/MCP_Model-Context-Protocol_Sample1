@@ -78,6 +78,8 @@ The transport is via StdIO, which means it communicates via standard input/outpu
 
 This client can now interact with the tools served by that MCP server.
 
+This line of code is the core setup that creates an **MCP client** which connects to a tool **MCP Server** running via **npx**
+
 ```csharp
 var client = await McpClientFactory.CreateAsync(
     new()
@@ -93,6 +95,20 @@ var client = await McpClientFactory.CreateAsync(
     }, options, null, null, default);
 ```
 
+**IMPORTANT NOTE**: in this sample the **MCP Server** is provided by a NodeJS package
+
+This launches a **Node.js tool server** defined in the MCP ecosystem (@modelcontextprotocol/server-everything).
+
+It’s a prebuilt server that exposes multiple tools (like echo, math, code, etc.).
+
+```
+npx -y @modelcontextprotocol/server-everything
+```
+
+Visit the following site for more information about this **MCP Server**
+
+https://www.npmjs.com/package/@modelcontextprotocol/server-everything
+
 ### 4.3. List Available Tools
 
 Lists all tools made available by the server (e.g., echo, math, etc.).
@@ -103,7 +119,6 @@ await foreach (var tool in client.ListToolsAsync())
     Console.WriteLine($"{tool.Name} ({tool.Description})");
 }
 ```
-
 
 ### 4.4. Call a Tool (Direct Execution)
 
@@ -192,13 +207,13 @@ while (true)
 
 This code:
 
-Spins up a local MCP tool server.
+a) Spins up a local MCP tool server.
 
-Lets you interact with tools directly or through an LLM.
+b) Lets you interact with tools directly or through an LLM.
 
-Enables the LLM to invoke tools dynamically as part of a conversation.
+c) Enables the LLM to invoke tools dynamically as part of a conversation.
 
-Uses OpenAI GPT to understand your intent and call tools intelligently.
+d) Uses OpenAI GPT to understand your intent and call tools intelligently.
 
 ```csharp
 using Microsoft.Extensions.AI;
