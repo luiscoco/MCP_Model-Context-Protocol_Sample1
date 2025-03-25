@@ -2,7 +2,9 @@
 
 In this post, we demonstrate how to build a C# Console Application that acts as an MCP (Model Context Protocol) Client.
 
-The goal is to enable OpenAI's API to access and invoke tools exposed by an MCP Server — specifically, a Node.js-based server provided by the following package:
+The goal is to enable OpenAI's API to access and invoke tools exposed by an MCP Server — specifically,
+
+a Node.js-based server provided by the following package (https://www.npmjs.com/package/@modelcontextprotocol/server-everything):
 
 ```
 @modelcontextprotocol/server-everything (NPM)
