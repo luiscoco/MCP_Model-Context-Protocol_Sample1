@@ -72,15 +72,21 @@ https://visualstudio.microsoft.com/vs/preview/#download-preview
 
 ## 2. Create a .NET 10 C# console application
 
+We run **Visual Studio 2022 v17.4** and create a new project
 
+![image](https://github.com/user-attachments/assets/1901fc87-815d-4228-8870-f26d34bd77c1)
 
+We select the **C# console application template** and press the Next button
 
+![image](https://github.com/user-attachments/assets/78caa1aa-73f4-458d-8005-5065bd6e6ede)
 
+We input the project name and location and press the Next button
 
+![image](https://github.com/user-attachments/assets/bbc2f1c1-e66c-42ed-b982-0d71bf366b30)
 
+We select the **.NET 10** framework a press the Create button
 
-
-
+![image](https://github.com/user-attachments/assets/456b7cae-866c-4bdb-9a1d-46baa6e72fe3)
 
 ## 3. Load the Nuget Packages
 
