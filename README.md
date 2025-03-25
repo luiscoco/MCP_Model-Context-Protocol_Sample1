@@ -22,6 +22,8 @@ Create an API-Key in the OpenAI web page:
 
 https://platform.openai.com/api-keys
 
+![image](https://github.com/user-attachments/assets/5868d310-1063-4738-976d-67ddfb432ef7)
+
 ## 2. Create a C# console application
 
 
