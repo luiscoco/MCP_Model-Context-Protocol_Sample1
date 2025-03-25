@@ -18,6 +18,9 @@ https://modelcontextprotocol.io/introduction
 
 ![image](https://github.com/user-attachments/assets/a97f3e57-7fc2-4597-8d2e-ae950ceed77e)
 
+Here are some MCP Servers samples:
+
+https://blog.stackademic.com/whatre-mcp-servers-about-10-mcp-servers-you-can-try-now-57f061479d81
 
 ## 1. Create the OpenAI API-Key
 
