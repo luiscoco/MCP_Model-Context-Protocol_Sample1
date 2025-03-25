@@ -46,7 +46,9 @@ Here are some MCP Servers samples:
 
 https://blog.stackademic.com/whatre-mcp-servers-about-10-mcp-servers-you-can-try-now-57f061479d81
 
-## 1. Prerrequisite: Create the OpenAI API-Key
+## 1. Prerrequisites
+
+### 1.1. Create the OpenAI API-Key
 
 Create an API-Key in the OpenAI web page:
 
@@ -54,17 +56,28 @@ https://platform.openai.com/api-keys
 
 ![image](https://github.com/user-attachments/assets/5868d310-1063-4738-976d-67ddfb432ef7)
 
-## 2. Create a C# console application
+### 1.2. Install .NET 10 and Visual Studio 2022 17.4(Preview Edition)
+
+Visit this site to download and install **.NET 10**
+
+https://dotnet.microsoft.com/en-us/download/dotnet/10.0
+
+![image](https://github.com/user-attachments/assets/c8ed8f22-96b3-468d-ba03-f0f488186596)
+
+Visit this site to download and install **Visual Studio 2022 v17.4 (Preview Edition)**
+
+https://visualstudio.microsoft.com/vs/preview/#download-preview
+
+![image](https://github.com/user-attachments/assets/7fb48da9-9ef7-44a4-ada7-6eebdc42a09d)
+
+## 2. Create a .NET 10 C# console application
 
 
 
 
-### 2.1. Install .NET 10 and Visual Studio 2022 17.4(Preview)
 
 
 
-
-### 2.2. Create a console application with Visual Studio
 
 
 
