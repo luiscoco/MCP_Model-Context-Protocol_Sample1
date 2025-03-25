@@ -18,8 +18,9 @@ https://modelcontextprotocol.io/introduction
 
 ## 1. Create the OpenAI API-Key
 
+Create an API-Key in the OpenAI web page:
 
-
+https://platform.openai.com/api-keys
 
 ## 2. Create a C# console application
 
