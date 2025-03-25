@@ -1,6 +1,26 @@
 # Model Context Protocol (MCP): Getting Started (MCP Client)
 
+In this post, we demonstrate how to build a C# Console Application that acts as an MCP (Model Context Protocol) Client.
 
+The goal is to enable OpenAI's API to access and invoke tools exposed by an MCP Server — specifically, a Node.js-based server provided by the following package:
+
+```
+@modelcontextprotocol/server-everything (NPM)
+```
+
+This server includes a variety of ready-to-use tools (such as echo, math, and more), which can be dynamically invoked by an LLM like GPT-4 via OpenAI's function calling interface.
+
+**Technologies Used**
+
+a) .NET 10
+
+b) Visual Studio 2022 (version 17.4)
+
+c) ModelContextProtocol SDK
+
+d) OpenAI .NET SDK
+
+e) Node.js (via npx) to launch the MCP tool server
 
 ## 0. What is Model Context Protocol (MCP)?
 
