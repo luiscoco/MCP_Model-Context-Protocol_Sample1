@@ -52,9 +52,6 @@ Load these two nuget packages:
 
 ![image](https://github.com/user-attachments/assets/ca7d53ad-5e96-4955-a1cf-74cadb638d8e)
 
-
-
-
 ## 4. Explaining sample source code
 
 This **C#** sample demonstrates how to use the **Model Context Protocol (MCP)** to integrate a tool-based AI system with an LLM (e.g., OpenAI GPT), and have a dynamic conversation where tools can be used during chat interactions.
@@ -108,6 +105,8 @@ npx -y @modelcontextprotocol/server-everything
 Visit the following site for more information about this **MCP Server**
 
 https://www.npmjs.com/package/@modelcontextprotocol/server-everything
+
+![image](https://github.com/user-attachments/assets/7c0860c6-392a-4526-95fb-5f1504a4a811)
 
 ### 4.3. List Available Tools
 
