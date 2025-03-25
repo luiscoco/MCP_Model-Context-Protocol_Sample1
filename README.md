@@ -41,6 +41,16 @@ https://platform.openai.com/api-keys
 
 ## 3. Load the Nuget Packages
 
+Load these two nuget packages:
+
+```
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.3.0-preview.1.25161.3" />
+    <PackageReference Include="ModelContextProtocol" Version="0.1.0-preview.1.25171.12" />
+  </ItemGroup>
+```
+
+![image](https://github.com/user-attachments/assets/ca7d53ad-5e96-4955-a1cf-74cadb638d8e)
 
 
 
