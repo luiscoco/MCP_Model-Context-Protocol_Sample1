@@ -1,4 +1,4 @@
-# Model Context Protocol (MCP): Getting Started (Client)
+# Model Context Protocol (MCP): Getting Started (MCP Client)
 
 
 
