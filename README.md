@@ -119,6 +119,12 @@ await foreach (var tool in client.ListToolsAsync())
 }
 ```
 
+These are the available tools provided by the MCP Server (https://www.npmjs.com/package/@modelcontextprotocol/server-everything):
+
+![image](https://github.com/user-attachments/assets/c77962a9-8a60-42df-9ac2-88f8f535d4f3)
+
+![image](https://github.com/user-attachments/assets/aff9920c-7fa6-4552-be6f-e025a5214a37)
+
 ### 4.4. Call a Tool (Direct Execution)
 
 This calls the echo tool, sending it a message.
