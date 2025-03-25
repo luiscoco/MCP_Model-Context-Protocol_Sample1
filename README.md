@@ -1,4 +1,4 @@
-# Model Context Protocol (MCP): getting start sample
+# Model Context Protocol (MCP): Getting Started (Client)
 
 
 
@@ -51,6 +51,11 @@ Load these two nuget packages:
 ```
 
 ![image](https://github.com/user-attachments/assets/ca7d53ad-5e96-4955-a1cf-74cadb638d8e)
+
+We can see in the following picture the ModelContextProtocol Nuget package web site:
+
+![image](https://github.com/user-attachments/assets/e44d465e-c974-4565-b913-ebda24d13087)
+
 
 ## 4. Explaining sample source code
 
@@ -299,6 +304,7 @@ while (true)
 
 ## 5. Run the application an verify the results
 
+![image](https://github.com/user-attachments/assets/9505d287-7866-4336-b282-c1bc5cd2616b)
 
 
 
