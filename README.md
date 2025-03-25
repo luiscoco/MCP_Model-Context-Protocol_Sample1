@@ -16,6 +16,9 @@ For more information visit the MCP official web site:
 
 https://modelcontextprotocol.io/introduction
 
+![image](https://github.com/user-attachments/assets/a97f3e57-7fc2-4597-8d2e-ae950ceed77e)
+
+
 ## 1. Create the OpenAI API-Key
 
 Create an API-Key in the OpenAI web page:
