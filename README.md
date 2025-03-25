@@ -46,7 +46,7 @@ Here are some MCP Servers samples:
 
 https://blog.stackademic.com/whatre-mcp-servers-about-10-mcp-servers-you-can-try-now-57f061479d81
 
-## 1. Create the OpenAI API-Key
+## 1. Prerrequisite: Create the OpenAI API-Key
 
 Create an API-Key in the OpenAI web page:
 
